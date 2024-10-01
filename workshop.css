@@ -1,0 +1,50 @@
+#hello{
+    text-align: center;
+}
+
+#left{
+    text-align: left;
+}
+
+#right{
+    text-align: right;
+}
+
+.align{
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.align{
+    flex-direction: column-reverse;
+}
+
+.division nav{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.image-align{
+display: flex;
+justify-content: space-evenly;
+margin-top: 10px;
+flex-direction: column;
+}
+
+.image-align #img2{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.inside-division > p{
+    margin-top: 5px;
+    display: inline;
+}
+
+.adjucent1 >  p {
+    font-style: italic;
+}
