@@ -1,0 +1,25 @@
+h1{
+    color: brown;
+    letter-spacing: 10px;
+    text-align: start;
+}
+
+h2{
+    text-align:  center;
+    word-spacing: 20px;
+    color:blueviolet
+}
+
+h3{
+    text-align: end;
+    text-transform: lowercase;
+    color: green;
+}
+
+p{
+    font-size: 24px;
+    word-spacing: 5px;
+    line-height: 2rem;
+    text-align: justify;
+    text-transform: capitalize;
+}
