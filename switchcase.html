@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch statements</h1>
+
+
+
+
+    <script>
+        let subject = "java"
+        switch(subject){
+            case "java":alert("Java")
+            break;
+            case "sql":alert("sql");
+            break;
+        }
+
+        //prompt by default(example for implecit type casting) will always take values as String
+        //therefore the anser will be printed as 101010
+        //because here concatination is performed
+        let a = prompt("Enter the first value")
+        let b = prompt("Enter second value")
+        let c = prompt("Enter the third number")
+        alert(a + b + c) // concatination is performed
+        x = Number(prompt("Enter the first number"))
+        y = Number(prompt("Enter the second number"))
+       //here if we try to invoke the global variable 
+       //inside any method or function using 'this' keyword 
+       //then it will result as 'undifined' if we are made global
+       //varibale as let type variable. If we made gloal variable as
+       //var type variable then it will show 100% output 
+       let r = 10  
+        function method(){
+            var r = 20
+            alert(r)
+            alert(this.r)
+        }
+        alert(x + y)
+        alert("The addition is: "+d)
+        method()
+    </script>
+</body>
+</html>
