@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "heading1">Welcome to my webscritp</h1>
+    <h1 id = "heading2">Welcome to Amazon Web Series</h1>
+    <h1 id = "javaScript">Java Script</h1>
+
+    <button onclick = "cocloChange()">Click here</button>
+    <button onclick="amazon()">Amazon</button>
+    <button onclick="javaScript()">Java Script</button>
+
+    <script>
+
+        function cocloChange(){
+          let h1 = document.getElementById("heading1")
+          h1.style.backgroundColor = "yellow";
+         // document.body.style.backgroundColor = "red"
+        }
+
+        function method(){
+            alert("Today is a goog day")
+            document.body.style.backgroundColor = "red"
+        }
+
+        function amazon(){
+            let h2 = document.getElementById("heading2")
+            h2.style.backgroundColor = "brown";
+            h2.style.borderRadius = "5px";
+            h2.style.textAlign = "center";
+            h2.style.display = "    block"
+        }
+
+        function javaScript(){
+            let h3 = document.getElementById("javaScript")
+            h3.style.backgroundColor = "gray"
+            h3.style.color = "white"
+            h3.style.display = "inline-block"
+            h3.style.borderRadius = "10px"
+
+        }
+
+
+    </script>
+</body>
+</html>
