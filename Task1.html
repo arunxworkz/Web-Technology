@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            display: flex;
+            justify-content: space-around; 
+            align-items: center;
+            border: 2px solid black;
+            background-color: gray;
+        }
+
+        .firstBox{
+            height: 200px;
+            width:200px;
+            background-color: yellowgreen;
+            display: inline-block;
+        }
+
+        .secondBox{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(11, 11, 11);
+        }
+
+        .thirdBox{
+            height: 200px;
+            width: 200px;
+            background-color:blanchedalmond;
+        }
+        
+        .firstMainBox{
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin: 10px;
+        }
+
+        .secondMainBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin:10px;
+        }
+
+        .thirdMainBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin:10px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+
+    <div class = "container">
+        <div class = "firstMainBox">
+            <div class = "firstBox" id = "firstBox"></div>
+            <div class = "button">
+                <button onclick="firstBox()">Button change</button>
+            </div>   
+            
+        </div>    
+
+        <div class = "secondMainBox">
+            <div class = secondBox id = "secondBox"></div>
+            <div class = "button">
+                <button onclick="secondBox()">Second button</button>
+            </div>
+        </div>    
+
+        <div class = "thirdMainBox">
+            <div class = "thirdBox" id = "thirdBox"></div>
+            <div>
+                <button onclick="thirdBox()">Third Box</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function firstBox(){
+            let firstBox = document.getElementById("firstBox");
+            firstBox.style.backgroundColor = "orange";
+        }
+
+        function secondBox(){
+            let secondBox = document.getElementById("secondBox");
+            secondBox.style.backgroundColor = "white";
+        }
+
+
+        function thirdBox(){
+            let thirdBox = document.getElementById("thirdBox");
+            thirdBox.style.backgroundColor = "green"; 
+        }
+    </script>
+    
+
+</body>
+</html>
