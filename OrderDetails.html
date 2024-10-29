@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 24px;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+        }
+        .nav-bar {
+            background-color: brown;
+            color: white;
+            padding: 10px;
+        }
+        .nav-bar nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+        #itemName, #itemQuantity, #itemPrice, #price {
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid #dedcdc;
+            background-color: #f9f9f9;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class = "nav-bar">
+        <nav>
+            <a href = "#">Home</a>
+            <a href = "#">About</a>
+        </nav>
+    </div>
+ 
+    <div class = "container">
+        <h1 style="text-align: center; margin-bottom: 10px;">Menu Details</h1>
+        <div id = "itemName"></div>
+        <div id = "itemQuantity"></div>
+        <div id = "itemPrice"></div>
+        <div id = "price"></div>
+    </div>
+
+    <script>
+        let itemName = prompt("Enter the item")
+        let itemQuantity = Number(prompt("Enter the quantity"))
+        let itemPrice = Number(prompt("Enter the price"))
+        
+        function item(){
+            let item = document.getElementById("itemName")
+            item.innerHTML = itemName
+        }
+        item()
+
+        function quantity(){
+            let quantity = document.getElementById("itemQuantity")
+            quantity.innerHTML = itemQuantity
+        }
+        quantity()
+
+        function pricing(){
+            let price = document.getElementById("itemPrice")
+            price.innerHTML = itemPrice
+        }
+        pricing()
+
+        function totalPrice(){
+            let total = itemQuantity * itemPrice
+            let ammount = document.getElementById("price")
+            ammount.innerHTML = total
+            if(total > 1000){
+                document.body.style.backgroundColor = "green"
+            }
+        }
+        totalPrice()
+    </script>
+</body>
+</html>
