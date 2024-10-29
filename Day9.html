@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Objects</h1>
+    <label id  = "otp">OTP</label>
+
+
+    <script>
+        let skills = {
+            color : "red",
+            price : 234,
+            isValid : true,
+            value : undefined
+    }
+
+    console.log(skills.color)
+
+    //adding
+    skills.adding = "345"
+    console.log(skills)
+
+    //updating
+    skills.price = 253
+    console.log(skills)
+
+    //delete
+    delete skills.value
+    console.log(skills)
+
+    console.log(skills)
+
+    let obj = {
+        userName : "arun",
+        password : 123456789,
+        array : ["userName", "password"],
+
+        obj1 : ()=> {
+            console.log("Thi is object inside another")
+        },
+        vehicle : {
+            array1 : ["car", "bus", true, undefined],
+            carColor : "red",
+            //This can not be done isValid : array1[2]
+            isvalid : false
+        }
+    }
+    console.log(obj)
+
+    obj.obj1()
+
+    console.log("After updating")
+    obj.vehicle.carColor = "blue"
+    console.log(obj)
+
+    //methods 
+    console.log(Object.keys(obj.vehicle))
+    console.log(Object.values(obj))
+    
+
+    objects = {
+        object1 : "car",
+        object2 : "bus",
+        object3 : "pen",
+        object4 : "book",
+        object5 : "umbrela",
+        object6 : "table"
+    }
+
+    console.log(Object.entries(objects))
+
+
+    //seal and freez
+
+    //seal - we can not add new data but we can update the data
+    Object.seal(objects)
+    objects.object1 = "helicopter"
+    console.log(objects) // updating the value
+    objects.object8 = "aeroplane"
+    console.log(objects) // we can not add another data
+
+
+    //freez - we can not perfomr either add or update
+
+    Object.freeze(objects)
+    objects.object10 = "chair"
+    objects.object10 = "Glass"
+    console.log(objects)
+
+    //Date
+
+    let x = new Date()
+    console.log(x.getDate())
+    console.log(x.getDay())
+
+    console.log(x.getHours())
+    console.log(x.getMinutes())
+    console.log(x.getSeconds())
+    console.log(x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds())
+
+    console.log(Math.floor(10.36))
+    console.log(Math.ceil(10.36))
+    console.log(Math.round(10.1))
+    console.log(Math.round(10.5))
+    console.log(Math.round(10.9))
+
+
+    //OTP generation
+    let number = document.getElementById('otp');
+    let otp = Math.round(Math.random()*10000);
+    number.innerHTML =` ${otp}`;
+
+
+    </script>
+</body>
+</html>
