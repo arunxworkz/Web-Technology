@@ -1,3 +1,156 @@
-h1{
-    color: orange;
+.bar{
+    height:100px;
+    width: 100%;
+    background-color: maroon;
+    margin-top: 0;
+}
+
+.diva1{
+    height: 150px;
+    width: 150px;
+    background-color:rgb(86, 43, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diva2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color:aqua;
+}
+
+.diva3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color:gray;
+}
+
+.diva4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color:blue;
+}
+
+.diva5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color: green;
+}
+
+.diva6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color:peru;
+}
+
+.diva7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color:chocolate;
+}
+
+.diva8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+}
+
+.div1{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.div2{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+}
+
+.div3{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin: 10px;
+    padding: 10px 10px 10px 25px;
+    gap:2rem;
+}
+
+.card-heading h3{
+    margin: 0;
+    margin-bottom: 10px;
+} 
+
+
+.div-paragraph p{
+    width: 300px;
+    margin: 0;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column; /* Ensures elements stack vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 320px;
+}    
+
+.div4{
+    margin: 10px;
+    padding: 10px;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column; /* Ensures elements stack vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 400px;
+}
+
+.div5 .div-paragraph p{
+    width: 380px;
+}
+
+.div5{
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.div6{
+    display: flex;
+    flex-direction: row;
+}
+
+.box1{
+    height: 2px;
+    width: 2px;
 }

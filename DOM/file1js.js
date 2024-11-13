@@ -1,3 +1,14 @@
-alert("todat is a good day")
+function box1(){
+    document.getElementById("#box1")
+    alert("Roadgili Raadikha")
+}
 
-document.querySelector("h1").innerHTML = "Today is a good DAY"
+function box2(){
+    document.getElementById("#box2")
+    alert("Nan Yavde L***L hero tara alla swamy")
+}
+
+function box3(){
+    document.getElementById("#box3")
+    alert("Yenri media")
+}
