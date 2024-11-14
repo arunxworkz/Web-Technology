@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <pre>
+            <label>Name</label>
+            <input name = "name" type = "text" onblur = "validate(event)">
+            <span id = "nameError"></span><br>
+            
+            <label>Phno Number</label>
+            <input name = "phno" type= "text"  onblur = "validate(event)">
+            <span id = "phnoErrorspan"></span><br>
+
+            <label>Email</label>
+            <input name = "email" type = "text"  onblur = "validate(event)">
+            <span id = "emailError"></span><br>
+
+            <label>Age</label>
+            <input name = "age" type = "text" onblur= "validate(event)">
+            <span id = "ageError"></span>
+
+            <!-- <label>Aaddress</label>
+            <input name = "address" type = "text">  -->
+
+            <button id = "isButton" type = "submit" disabled>Submit</button>
+        </pre>
+    </form>
+
+    <script>
+        const validate=(event)=>{
+            const{name, value} = event.target;
+
+            if(name === "name" && value.length < 3 && value.trim()){
+                let ref = document.getElementById("nameError")
+                ref.innerHTML = "NAme is invali"
+            }else if(name === "name" && value.trim() && value.length > 3){
+                let ref = document.getElementById("nameError")
+                ref.innerHTML = ""
+            }
+
+            let ref1 = document.getElementById("phnoErrorspan")
+            if(name === "phno" && value.length < 10 && value.trim()){
+                ref1.innerHTML = "Phone number is invalid"
+            }else if(name === "phno" && value.length == 10 && value.trim()){
+                ref1.innerHTML = ""
+            }
+
+            let ref2 = document.getElementById("emailError")
+            if(name === "email" && value.trim() && !value.endsWith("@gamil.com")){
+                ref2.innerHTML = "Email is invalid"
+            }else if(name === "email" && value.trim() && value.endsWith("@gmail.com")){
+                ref2.innerHTML = ""
+            }
+
+            let ref3 = document.getElementById("ageError")
+            if(name === "age" && !value.trim()){
+                ref3.innerHTML = "Age is invalid"
+            }else if(name === "age" && value.trim()){
+                ref3.innerHTML = ""
+            }
+
+            // formData = {
+            //     ...formData, [name]: value
+            // }
+
+            let formData = {
+                name: '',
+            phno: '',
+            email: '',
+            age:''
+            };
+
+            let button = document.getElementById("isButton")
+            if(formData.name.length < 3 && formData.phno.length<10&&
+                !formData.email.endsWith("@gmail.com")){
+                    isButton.disabled = false;
+                }else{
+                    isButton.disabled = true;
+                }
+        }
+    </script>
+
+</body>
+</html>

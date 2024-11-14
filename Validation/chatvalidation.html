@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+            background-color: skyblue;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2 class="text-center">Register</h2>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" onblur="validate(event)">
+                <span id="emailError" style="color:red"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" onblur="validate(event)">
+                <span id="passwordError" style="color:red"></span>                
+            </div>
+
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" onblur="validate(event)">
+                <span id="confirmPasswordError" style="color:red"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" onblur="validate(event)">
+                <span id="firstNameError" style="color:red"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" onblur="validate(event)">
+                <span id="lastNameError" style="color:red"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="keepSignedIn">
+                <label class="form-check-label" for="keepSignedIn">Keep me signed in</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" id="registerButton" disabled>Register</button>
+        </form>
+    </div>
+
+    <script>
+        const validate = (event) => {
+            const { name, value } = event.target;
+            let isValid = true;
+
+            if (name === "firstName" && value.length < 3) {
+                document.getElementById("firstNameError").innerText = "Name is invalid";
+                isValid = false;
+            } else {
+                document.getElementById("firstNameError").innerText = "";
+            }
+
+            if (name === "lastName" && value.length < 3) {
+                document.getElementById("lastNameError").innerText = "Name is invalid";
+                isValid = false;
+            } else {
+                document.getElementById("lastNameError").innerText = "";
+            }
+
+            if (name === "password" && value.length < 10) {
+                document.getElementById("passwordError").innerText = "Password is too short";
+                isValid = false;
+            } else {
+                document.getElementById("passwordError").innerText = "";
+            }
+
+            const passwordValue = document.getElementById("password").value;
+            if (name === "confirmPassword" && (value !== passwordValue || value.length < 10)) {
+                document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+                isValid = false;
+            } else {
+                document.getElementById("confirmPasswordError").innerText = "";
+            }
+
+            if (name === "email" && !value.endsWith("@gmail.com")) {
+                document.getElementById("emailError").innerText = "Email is invalid";
+                isValid = false;
+            } else {
+                document.getElementById("emailError").innerText = "";
+            }
+
+            checkFormValidity();
+        };
+
+        const checkFormValidity = () => {
+            const firstNameValid = document.getElementById("firstNameError").innerText === "";
+            const lastNameValid = document.getElementById("lastNameError").innerText === "";
+            const emailValid = document.getElementById("emailError").innerText === "";
+            const passwordValid = document.getElementById("passwordError").innerText === "";
+            const confirmPasswordValid = document.getElementById("confirmPasswordError").innerText === "";
+
+            const allValid = firstNameValid && lastNameValid && emailValid && passwordValid && confirmPasswordValid;
+            document.getElementById("registerButton").disabled = !allValid;
+        };
+    </script>
+</body>
+</html>
