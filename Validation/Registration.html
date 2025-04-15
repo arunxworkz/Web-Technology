@@ -74,15 +74,22 @@
         const validate=(event)=>{
             const{name, value} = event.target;
 
-            let isvalid = true;
+            let isvalid = {
+                email: false,
+                firstName: false,
+                lastName: false,
+                password: false,
+                confirmPassword: false,
+            }
 
             if(name === "firstName" && value.length < 3 && value.trim()){
                 let ref = document.getElementById("firstNameError")
                 ref.innerHTML = "NAme is invali"
-                return isvalid = false
+                return isvalid.email = false
             }else if(name === "firstName" && value.trim() && value.length > 3){
                 let ref = document.getElementById("firstNameError")
                 ref.innerHTML = ""
+                return isvalid.email = true
             }
 
             if(name === "lastName" && value.length < 3 && value.trim()){
@@ -118,7 +125,7 @@
                 ref3.innerHTML = ""
             }
 
-            checkButton()
+            document.getElementById("button").disabled = !(firstName & lastName && password && confirmPassword&&email)
         }    
     </script>
     

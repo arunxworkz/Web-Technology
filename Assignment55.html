@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="form">
+<pre>
+Name<input type="text" id="name" onchange="onPressname()">
+Address<input type="text" id="address" onchange="onPressEmail()">
+Age<input type="text" id="age" onchange="onPressage()">
+Qualification<select id="qualification" onchange="onPressQualification()">
+
+
+Percentage<input type="text" id="per" onchange="onpressPercentage()">
+college<input type="text" id="college" onkeypress="onpresscollege()">
+<input type="submit" value="submit">
+
+</pre>
+</form>
+
+<h3 id="show1"></h3>
+<h3 id="show2"></h3>
+<h3 id="show3"></h3>
+<h3 id="show4"></h3>
+<h3 id="show5"></h3>
+<h3 id="show6"></h3>
+<script></script>
+
+<script>
+    // let onPressname=()=>{
+	
+    //     let getName=document.getElementById("name");
+    //     document.getElementById("show1").innerHTML=getName.value;
+    
+    // }
+    
+    // (function(){
+    //     console.log("hello11");
+        
+    // }());
+    
+    // let onPressEmail=()=>{
+    //     let getaddress=document.getElementById("address").value;
+    //     document.getElementById("show2").innerHTML=getaddress;
+    // }
+    
+    // let onPressage=()=>{
+    //     let getAge=document.getElementById("age").value;
+    //     document.getElementById("show3").innerHTML=getAge;
+        
+    // }
+    
+    // let onPressQualification=()=>{
+    //     let getQualification=document.getElementById("qualification").value;
+    //     document.getElementById("show4").innerHTML=getQualification;
+        
+    // }
+    
+    // let onpressPercentage=()=>{
+    // let getPer=document.getElementById("per").value;
+    // document.getElementById("show5").innerHTML=getPer;
+    // }
+    // let  onpresscollege=()=>{
+    //     let getCollege=document.getElementById("college").value;
+    //     document.getElementById("show6").innerHTML=getCollege;
+    // }
+
+    function name (){
+            let getNAme = document.getElementById("name")
+            document.getElementById("show1").innerHTML=getName.value;
+    }
+
+    function address=()=>{
+        let getAddress = document.getElementById("naaddress")
+        document.getElementById("show2").innerHTML=getName.value;
+    }
+
+    (function(){
+        let getage = document.getElementById("age")
+        document.getElementById("show3").innerHTML=getName.value;
+        
+    }());
+
+    function qualification(){
+        let getQualification = document.getElementById("qualification")
+        document.getElementById("show4").innerHTML=getName.value;
+    }
+</script>
+
+
+</body>
+</html>

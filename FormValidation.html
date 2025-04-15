@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        UserName<input placeholder="Enter the user name" name = "userName" id = "name" onblur="handleValidate(event)"/>
+        <span id="error" style = "color:red"></span><br><br>
+        Phone number<input placeholder="Enter the phone number" name = "phNo" id = "phNo" onblur="handleValidate(event)"/>
+        <span id = "phError" style = "color:red"></span>
+    </form>
+
+
+    <script>
+        const handleValidate=(event)=>{
+            const{name, value} = event.target
+            if(name === "userName" && value.length < 3){
+               console.log("User name is" + name)
+               let h1 = document.getElementById("error")
+               h1.innerHTML = "NAme is Not valid"
+            }
+
+            if(name === "phNo" && value.length<10){
+                console.log("Phonenumber is")
+                let h2 = document.getElementById("phError")
+                h2.innerHTML = "Phone number is Not valid"
+
+            }
+        }
+    </script>
+</body>
+</html>

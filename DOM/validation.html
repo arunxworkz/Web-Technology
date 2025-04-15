@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Name</label>
+        <input name = "name" type = "text" onblur = "handleValidate(event)">
+        <span id = nameError></span>
+        <br>
+        <br>
+        <label>Phone Number</label>
+        <input name = "phno" type = "text" onblur="handleValidate(event)">
+        <span id = "phnoError"></span>
+    </form>
+
+
+
+    <script>
+        const handleValidate=(event)=>{
+            const{name, value} = event.target //restructuring
+            if(name === "name" && value.length<3){
+                console.log(name+" "+value);
+                let h1 = document.getElementById("nameError")
+                h1.innerHTML = "NAme is not valid"
+            }
+
+            if(name === "phno" && value.length < 10){
+                let h2 = document.getElementById("phnoError")
+                h2.innerHTML = "Phnoe number is invalid"
+            }
+        }
+    </script>
+</body>
+</html>

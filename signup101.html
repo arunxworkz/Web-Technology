@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f3f4f6;
+    }
+
+    .login-container {
+        background-color: #ffffff;
+        width: 320px;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .login-container img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .login-container .input-group {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .login-container .input-group label {
+        display: block;
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.2rem;
+    }
+
+    .login-container .input-group input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .login-container .input-group .forgot-password {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 0.3rem;
+    }
+
+    .login-container button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .login-container .signup-link {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        color: #666;
+    }
+
+    .login-container .signup-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .login-container .social-login {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+
+    .login-container .social-login img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="login-container">
+    <img src="./girl.png" alt="Illustration" />
+    <h2>Log-in</h2>
+
+    <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email id" required>
+    </div>
+
+    <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" required>
+        <div class="forgot-password">
+            <span>Forget password?</span>
+        </div>
+    </div>
+
+    <button type="submit">Login</button>
+
+    <p class="signup-link">Don't have an account? <a href="#">Sign-up</a></p>
+
+    <div class="social-login">
+        <img src="google-icon.png" alt="Login with Google">
+        <img src="facebook-icon.png" alt="Login with Facebook">
+    </div>
+</div>
+</body>
+</html>

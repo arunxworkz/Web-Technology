@@ -65,9 +65,9 @@
 
             }
         }
-        if (name.length >= 3 && mobile.length >= 10 && email.length >= 5 && address.length >= 5 && pincode.length < 6) {
+        if (name.length < 3 && mobile.length < 10 && email.length < 5 && address.length < 5 && pincode.length < 6) {
     submitButton.disabled = true;
-  } else {
+  } else {  
     submitButton.disabled = false;
   }
     </script>
