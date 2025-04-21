@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <style>
+      .founrtSectionHeading #projects {
+  display: inline-block;
+  color: rgb(187, 237, 237);
+  font-size: 4.5rem;
+  margin-top: 24px;
+  padding-left: 10%;
+}
+
+.fourthSection {
+  margin: 0 24px 24px 24px;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 200, 0, 0.3),
+              0 0 25px rgba(255, 255, 255, 0.5),
+              0 0 25px rgba(200, 0, 0, 0.6);
+}
+
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .card-body {
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+    </style>
+</head>
+<body>
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="founrtSectionHeading">
+        <h1><span id="projects">Projects</span></h1>
+      </div>
+      
+      <section class="fourthSection container">
+        <div class="row g-4 justify-content-center">
+      
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img src="images/slideimage1.png" class="card-img-top" alt="Gym Website">
+              <div class="card-body">
+                <h5 class="card-title">Gym Website</h5>
+                <p class="card-text">A role-based Gym Management System built with Java, Spring Boot, JPA, Maven, HTML, and CSS — enabling seamless user registration, workout tracking, and admin control.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img src="images/commonmoduleimage.jpeg" class="card-img-top" alt="Common Modules">
+              <div class="card-body">
+                <h5 class="card-title">Common Modules</h5>
+                <p class="card-text">A centralized module offering account locking, authentication, file uploads, and other reusable features for seamless integration across the website.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img src="images/slideimage3.png" class="card-img-top" alt="IoT Irrigation System">
+              <div class="card-body">
+                <h5 class="card-title">Smart Irrigation System</h5>
+                <p class="card-text">An IoT-based Smart Irrigation System integrated with a Dual Axis Solar Tracker to optimize water usage and maximize solar energy efficiency for sustainable farming.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img src="images/slideimage3.png" class="card-img-top" alt="IEEE Paper">
+              <div class="card-body">
+                <h5 class="card-title">IEEE Paper Publication</h5>
+                <p class="card-text"><a href="https://ieeexplore.ieee.org/document/10690621" target="_blank">Read the IEEE Paper</a></p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+</body>
+</html>
