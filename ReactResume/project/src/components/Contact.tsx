@@ -11,7 +11,7 @@ export default function Contact() {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://192.168.180.43:8080/api/contact", {
+      const response = await fetch("http://localhost:8080/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
