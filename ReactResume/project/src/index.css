@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+  @apply bg-gradient-to-r from-white via-fuchsia-500 to-cyan-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: -200% center; }
+}
+
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 2s linear infinite;
+  }
+}
